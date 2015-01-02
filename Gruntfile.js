@@ -9,6 +9,10 @@ module.exports = function(grunt) {
     grunt.loadTasks('grunt');
 
     // Register tasks
-    grunt.registerTask('dev', []);
-    grunt.registerTask('build', []);
+    grunt.registerTask('copyAll', ['copy:fonts', 'copy:images', 'copy:html', 'copy:css']);
+
+    grunt.registerTask('dev', ['watch']);
+    grunt.registerTask('build', ['concat', 'uglify', 'sass', 'jade', 'copyAll', 'imagemin', 'autoprefixer', 'cssmin']);
+
+    grunt.registerTask('default', ['dev']);
 };

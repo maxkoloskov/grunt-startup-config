@@ -13,6 +13,6 @@ module.exports = function(grunt) {
 
     grunt.registerTask('dev', ['connect:dev', 'watch']);
     grunt.registerTask('build', ['concat', 'uglify', 'sass', 'jade', 'copyAll', 'imagemin', 'autoprefixer', 'cssmin']);
-    grunt.registerTask('prod', ['build', 'connect:prod:keepalive']);
+    grunt.registerTask('prod', ['build', 'connect:prod']);
     grunt.registerTask('default', ['dev']);
 };

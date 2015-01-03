@@ -1,4 +1,3 @@
 grunt-startup-config
 ====================
-
-Quick start Grunt configuration
+Grunt-конфигурация для быстрого начала работы.

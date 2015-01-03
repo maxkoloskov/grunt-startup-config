@@ -5,11 +5,18 @@ module.exports = function(grunt) {
         },
         scripts: {
             files: ['dev/js/*.js'],
-            tasks: ['concat', 'uglify'],
+            tasks: ['jshint', 'concat', 'uglify'],
             options: {
                 spawn: false
             }
         },
+//        jshint: {
+//            files: ['dev/js/*.js', 'dev/js/app/*.js', 'dev/js/app/**/*.js'],
+//            task: ['jshint'],
+//            options: {
+//                spawn: false
+//            }
+//        },
         sass: {
             files: ['dev/sass/**/*.scss', 'dev/sass/*.scss'],
             tasks: ['sass', 'autoprefixer', 'cssmin'],

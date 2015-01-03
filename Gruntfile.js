@@ -11,8 +11,8 @@ module.exports = function(grunt) {
     // Register tasks
     grunt.registerTask('copyAll', ['copy:fonts', 'copy:images', 'copy:html', 'copy:css']);
 
-    grunt.registerTask('dev', ['watch']);
+    grunt.registerTask('dev', ['connect:dev', 'watch']);
     grunt.registerTask('build', ['concat', 'uglify', 'sass', 'jade', 'copyAll', 'imagemin', 'autoprefixer', 'cssmin']);
-
+    grunt.registerTask('prod', ['build', 'connect:prod:keepalive']);
     grunt.registerTask('default', ['dev']);
 };

@@ -1,10 +1,22 @@
 module.exports = function(grunt) {
     grunt.config('connect', {
-        options: {
-            hostname: '*',
-            port: 8000,
-            base: 'build/',
-            open: true
+        dev: {
+            options: {
+                hostname: 'localhost',
+                port: 8000,
+                base: 'build',
+                open: true
+            }
+        },
+
+        prod: {
+            options: {
+                keepalive: true,
+                hostname: '*',
+                port: 8000,
+                base: 'build',
+                open: true
+            }
         }
     });
 

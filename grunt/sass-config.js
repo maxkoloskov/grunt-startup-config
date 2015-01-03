@@ -1,6 +1,9 @@
 module.exports = function(grunt) {
     grunt.config('sass', {
         dist: {
+            options: {
+                style: 'expanded'
+            },
             files: [{
                 expand: true,
                 cwd: 'dev/sass',

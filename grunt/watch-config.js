@@ -10,13 +10,6 @@ module.exports = function(grunt) {
                 spawn: false
             }
         },
-//        jshint: {
-//            files: ['dev/js/*.js', 'dev/js/app/*.js', 'dev/js/app/**/*.js'],
-//            task: ['jshint'],
-//            options: {
-//                spawn: false
-//            }
-//        },
         sass: {
             files: ['dev/sass/**/*.scss', 'dev/sass/*.scss'],
             tasks: ['sass', 'autoprefixer', 'cssmin'],
